@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Product>;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Product Menu</h1>
+
+@foreach (Product prod in Model)
+{
+    <div><a href="/product/detail?id=@prod.id"><b>@prod.name</b></a> $@prod.price</div>
+}
